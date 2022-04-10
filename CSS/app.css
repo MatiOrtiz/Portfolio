@@ -1,0 +1,269 @@
+*{
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+img, figure{
+    display: flex;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+
+a{
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+video{
+    display: flex;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+}
+
+p a{
+    display: inline;
+}
+
+li{
+    list-style-type: none;
+}
+
+table, tr, td{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+form, input, textarea, select{
+    color: inherit;
+    background-color: transparent;
+    display: flex;
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+}
+
+body{
+    background-color: var(--blanco);
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    font-smooth: always;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+:root{
+    --rojo: #e50914;
+    --blanco: white;
+    --gris: #383838;
+    --gris-f: #757575;
+    --negro: black;
+    --tipo-titular: 'Playfair Display', serif;
+    --tipo-principal: 'Inter', sans-serif;
+}
+
+.header{
+    background: lightblue;
+    min-height: 5em;
+    width: 100%;
+
+    padding: 1rem 2em;
+
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.header.h1{
+    
+}
+.header .h1 .a{
+
+}
+.header .nav{
+    
+}
+.header .ul{
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.header .li{
+    margin: 0 1em;
+}
+.header .li .a{
+
+}
+
+.main{
+    background: lightgray;
+    margin: 0 0 1em;
+    text-align: center;
+}
+.seccion{
+    background: lightblue;
+    /* margin: 1rem 0; */
+    min-height: 80vh;
+    padding: 2em;
+    width: 100%;
+
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.seccion .info{
+    font-size: 1.2em;
+}
+.seccion .circulos{
+
+}
+.seccion .circulo{
+
+} 
+.seccion .ul{
+    align-items: center;
+    /* background: red; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 2em 0 0;
+} 
+.seccion .ul .li{
+    /* background: chartreuse; */
+    margin: 0 1em;
+}
+.seccion .ul .a{
+    border-top: 1px solid rgba(0, 0, 0, .4);
+    border-radius: 50%;
+    font-weight: 600;
+    padding: 1em 1em 1em;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+.seccion .ul .a:hover{
+    border-color: black;
+}
+.seccion .h2{
+    font-family: var(--tipo-titular);
+    font-size: 5em;
+    font-weight: 600;
+    line-height: 1em;
+}
+.seccion .h3{
+    font-family: var(--tipo-titular);
+    font-size: 4.3em;
+}
+
+.seccion .p{
+
+}
+.seccion .grid{
+    background: lightcoral;
+    margin: 1em 0;
+    max-width: 40em;
+    width: 98%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1em;
+}
+.seccion .article{
+    background: lightgoldenrodyellow;
+    min-height: 20vh;
+    width: 100%;
+
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    position: relative;
+}
+.seccion .a{
+    /* background: red; */
+    width: 100%;
+}
+.seccion .figure{
+    background: red;
+    width: 100%;
+}
+.seccion .img{
+    background: lime;
+    width: 100%;
+}
+.seccion .h4{
+    background-color: rgba(255, 255, 255, .5);
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+.works .h2{
+    margin: 0 0 1em;
+}
+.section{
+    text-align: center;
+}
+.about{
+
+}
+.about .h2{
+    margin: 0 0 1em;
+}
+.about .p{
+    background: lime;
+    margin: 0 0 1em;
+    max-width: 40em;
+    text-align: left;
+}
+.about .socialMedia{
+    background: lightgreen;
+    width: 100%;
+}
+.about .li{
+    background: orange;
+    margin: 0 1em;
+}
+.about .a{
+
+}
+.about .svg{
+    /* background: red; */
+    height: 2em;
+    width: 2em;
+}
+
+.footer{
+    background-color: lightpink;
+    padding: 2em 0;
+    text-align: center;
+}
+.figure .span{
+
+}
