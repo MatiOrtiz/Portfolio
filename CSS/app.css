@@ -179,7 +179,6 @@ body{
 
 }
 .seccion .grid{
-    background: lightcoral;
     margin: 1em 0;
     max-width: 40em;
     width: 98%;
@@ -190,7 +189,7 @@ body{
 }
 .seccion .article{
     background: lightgoldenrodyellow;
-    min-height: 20vh;
+    min-height: 10vh;
     width: 100%;
 
     align-items: center;
@@ -198,6 +197,7 @@ body{
     flex-flow: column nowrap;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 .seccion .a{
     /* background: red; */
@@ -213,6 +213,7 @@ body{
 }
 .seccion .h4{
     background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(1rem);
     height: 100%;
     position: absolute;
     bottom: 0;
@@ -223,6 +224,12 @@ body{
     justify-content: center;
     display: flex;
     flex-flow: row wrap;
+    transform: translateY(100%);
+    transition: all .5s ease;
+}
+.seccion .article:hover .h4{
+    opacity: 1;
+    transform: translateY(0%);
 }
 .works .h2{
     margin: 0 0 1em;
@@ -237,8 +244,8 @@ body{
     margin: 0 0 1em;
 }
 .about .p{
-    background: lime;
-    margin: 0 0 1em;
+    font-size: 1.5em;
+    margin: 0 0 2rem;
     max-width: 40em;
     text-align: left;
 }
@@ -246,7 +253,7 @@ body{
     background: lightgreen;
     width: 100%;
 }
-.about .li{
+.about .socialMedia .li{
     background: orange;
     margin: 0 1em;
 }
@@ -255,8 +262,8 @@ body{
 }
 .about .svg{
     /* background: red; */
-    height: 2em;
-    width: 2em;
+    height: 3em;
+    width: 3em;
 }
 
 .footer{
