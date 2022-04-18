@@ -62,13 +62,61 @@ form, input, textarea, select{
 }
 
 body{
-    background-color: var(--blanco);
+    background-color: var(--negro);
+    color: var(--blanco);
     font-family: var(--tipo-principal);
     font-size: 100%;
     font-smooth: always;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing:grayscale;
+}
+
+.circles{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    filter: blur(40px);
+    animation: circle1 100s linear infinite both;
+}
+.circles .circle{
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    animation: circle1 100s linear infinite both;
+}
+
+.circles .circle1{
+    top: 0%;
+    left: 0%;
+}
+.circles .circle1 .path{
+    fill: seagreen;
+}
+.circles .circle2{
+    top: 0%;
+    right: 0%;
+}
+.circles .circle2 .path{
+    fill: rgb(94, 71, 196);
+}
+.circles .circle3{
+    bottom: 0%;
+    left: 0%;
+}
+.circles .circle3 .path{
+    fill: rgb(165, 127, 1);
+}
+.circles .circle4{
+    bottom: 0%;
+    right: 0%;
+}
+.circles .circle4 .path{
+    fill: rgb(0, 59, 155);
 }
 
 :root{
@@ -82,14 +130,13 @@ body{
 }
 
 .header{
-    background: lightblue;
+    display: none;
     min-height: 5em;
     width: 100%;
 
     padding: 1rem 2em;
 
     align-items: center;
-    display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
@@ -115,13 +162,14 @@ body{
 
 }
 
-.main{
-    background: lightgray;
+.main{ 
+    background: rgba(0, 0, 0, .7);
     margin: 0 0 1em;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 .seccion{
-    background: lightblue;
     /* margin: 1rem 0; */
     min-height: 80vh;
     padding: 2em;
@@ -134,6 +182,8 @@ body{
 }
 .seccion .info{
     font-size: 1.2em;
+    animation: aparecer1 2s ease 1 both;
+    margin-top: 3em;
 }
 .seccion .circulos{
 
@@ -154,23 +204,26 @@ body{
     margin: 0 1em;
 }
 .seccion .ul .a{
-    border-top: 1px solid rgba(0, 0, 0, .4);
+    border: 1px solid rgba(255, 255, 255, .2);
     border-radius: 50%;
     font-weight: 600;
     padding: 1em 1em 1em;
     text-transform: uppercase;
     transition: all .5s ease;
+    animation: aparecer1 2s ease 1 backwards;
 }
 .seccion .ul .a:hover{
-    border-color: black;
+    border-color: white;
 }
 .seccion .h2{
+    color: white;
     font-family: var(--tipo-titular);
     font-size: 5em;
     font-weight: 600;
     line-height: 1em;
 }
 .seccion .h3{
+    color: white;
     font-family: var(--tipo-titular);
     font-size: 4.3em;
 }
@@ -184,7 +237,7 @@ body{
     width: 98%;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1em;
 }
 .seccion .article{
@@ -198,17 +251,16 @@ body{
     justify-content: center;
     position: relative;
     overflow: hidden;
+    border-radius: 0.5em;
 }
 .seccion .a{
-    /* background: red; */
+    color: white;
     width: 100%;
 }
 .seccion .figure{
-    background: red;
     width: 100%;
 }
 .seccion .img{
-    background: lime;
     width: 100%;
 }
 .seccion .h4{
@@ -230,47 +282,74 @@ body{
 .seccion .article:hover .h4{
     opacity: 1;
     transform: translateY(0%);
+    border-radius: 0.5em;
+}
+.works{
+    color: white;
+    margin-top: 3em;
 }
 .works .h2{
-    margin: 0 0 1em;
+    margin: .3em 0 1em;
 }
-.section{
+.seccion{
     text-align: center;
 }
 .about{
-
+    margin-top: 3em;
 }
 .about .h2{
     margin: 0 0 1em;
 }
 .about .p{
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin: 0 0 2rem;
     max-width: 40em;
     text-align: left;
 }
-.about .socialMedia{
-    background: lightgreen;
+.about .socialMedia{  
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     width: 100%;
 }
 .about .socialMedia .li{
-    background: orange;
-    margin: 0 1em;
+    margin: 3em 1em 0;
 }
 .about .a{
 
 }
 .about .svg{
-    /* background: red; */
     height: 3em;
+    margin-top: 1.5em;
     width: 3em;
 }
 
 .footer{
-    background-color: lightpink;
     padding: 2em 0;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 .figure .span{
 
+}
+
+@keyframes circle1{
+    from{
+        transform: rotate(0deg) scale(2);
+    }
+    to{
+        transform: rotate(360deg) scale(2);
+    }
+}
+@keyframes aparecer1{
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
