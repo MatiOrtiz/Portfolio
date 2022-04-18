@@ -185,12 +185,7 @@ body{
     animation: aparecer1 2s ease 1 both;
     margin-top: 3em;
 }
-.seccion .circulos{
 
-}
-.seccion .circulo{
-
-} 
 .seccion .ul{
     align-items: center;
     /* background: red; */
@@ -320,9 +315,9 @@ body{
 
 }
 .about .svg{
-    height: 3em;
+    height: 2.5em;
     margin-top: 1.5em;
-    width: 3em;
+    width: 2.5em;
 }
 
 .footer{
