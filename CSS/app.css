@@ -95,14 +95,14 @@ body{
     left: 0%;
 }
 .circles .circle1 .path{
-    fill: seagreen;
+    fill: rgb(0, 59, 155);
 }
 .circles .circle2{
     top: 0%;
     right: 0%;
 }
 .circles .circle2 .path{
-    fill: rgb(94, 71, 196);
+    fill: rgb(165, 127, 1);
 }
 .circles .circle3{
     bottom: 0%;
@@ -163,7 +163,7 @@ body{
 }
 
 .main{ 
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .6);
     margin: 0 0 1em;
     text-align: center;
     position: relative;
@@ -195,7 +195,6 @@ body{
     margin: 2em 0 0;
 } 
 .seccion .ul .li{
-    /* background: chartreuse; */
     margin: 0 1em;
 }
 .seccion .ul .a{
@@ -259,7 +258,7 @@ body{
     width: 100%;
 }
 .seccion .h4{
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(39, 36, 36, 0.5);
     backdrop-filter: blur(1rem);
     height: 100%;
     position: absolute;
